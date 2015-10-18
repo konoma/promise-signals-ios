@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F861A034BC651936C4A6182 /* Pods_PromiseSignals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB97DFB96133793B7178A31 /* Pods_PromiseSignals.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		63666E821BD3ACC2008B001C /* PromiseSignals.h in Headers */ = {isa = PBXBuildFile; fileRef = 63666E811BD3ACC2008B001C /* PromiseSignals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63666E891BD3ACC2008B001C /* PromiseSignals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63666E7E1BD3ACC2008B001C /* PromiseSignals.framework */; settings = {ASSET_TAGS = (); }; };
 		63666E8E1BD3ACC2008B001C /* PromiseSignalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63666E8D1BD3ACC2008B001C /* PromiseSignalsTests.swift */; };
@@ -23,12 +24,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DB97DFB96133793B7178A31 /* Pods_PromiseSignals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PromiseSignals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E5471E9A2C2B373B93FC02C /* Pods-PromiseSignals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromiseSignals.release.xcconfig"; path = "Pods/Target Support Files/Pods-PromiseSignals/Pods-PromiseSignals.release.xcconfig"; sourceTree = "<group>"; };
 		63666E7E1BD3ACC2008B001C /* PromiseSignals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseSignals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63666E811BD3ACC2008B001C /* PromiseSignals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PromiseSignals.h; sourceTree = "<group>"; };
 		63666E831BD3ACC2008B001C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63666E881BD3ACC2008B001C /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63666E8D1BD3ACC2008B001C /* PromiseSignalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseSignalsTests.swift; sourceTree = "<group>"; };
 		63666E8F1BD3ACC2008B001C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92EDAB72A1638B07CAB42042 /* Pods-PromiseSignals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromiseSignals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PromiseSignals/Pods-PromiseSignals.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F861A034BC651936C4A6182 /* Pods_PromiseSignals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +55,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B8EC98C7C159BFE8C985F73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DB97DFB96133793B7178A31 /* Pods_PromiseSignals.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4AA79691E03CE50E882CF90B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92EDAB72A1638B07CAB42042 /* Pods-PromiseSignals.debug.xcconfig */,
+				4E5471E9A2C2B373B93FC02C /* Pods-PromiseSignals.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		63666E741BD3ACC2008B001C = {
 			isa = PBXGroup;
 			children = (
 				63666E801BD3ACC2008B001C /* Sources */,
 				63666E8C1BD3ACC2008B001C /* Tests */,
 				63666E7F1BD3ACC2008B001C /* Products */,
+				4AA79691E03CE50E882CF90B /* Pods */,
+				0B8EC98C7C159BFE8C985F73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,10 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63666E921BD3ACC2008B001C /* Build configuration list for PBXNativeTarget "PromiseSignals" */;
 			buildPhases = (
+				E6B3F8C9EB58D5D7F6C7E730 /* Check Pods Manifest.lock */,
 				63666E791BD3ACC2008B001C /* Sources */,
 				63666E7A1BD3ACC2008B001C /* Frameworks */,
 				63666E7B1BD3ACC2008B001C /* Headers */,
 				63666E7C1BD3ACC2008B001C /* Resources */,
+				BBFB5FDFAC4918A3C82824AD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +213,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BBFB5FDFAC4918A3C82824AD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PromiseSignals/Pods-PromiseSignals-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6B3F8C9EB58D5D7F6C7E730 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63666E791BD3ACC2008B001C /* Sources */ = {
@@ -306,6 +365,7 @@
 		};
 		63666E931BD3ACC2008B001C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92EDAB72A1638B07CAB42042 /* Pods-PromiseSignals.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -322,6 +382,7 @@
 		};
 		63666E941BD3ACC2008B001C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E5471E9A2C2B373B93FC02C /* Pods-PromiseSignals.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

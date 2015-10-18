@@ -1,0 +1,21 @@
+PODS:
+  - PromiseKit/CorePromise (3.0.0)
+
+DEPENDENCIES:
+  - PromiseKit/CorePromise (from `https://github.com/mxcl/PromiseKit.git`, branch
+    `swift-2.0-beta5`)
+
+EXTERNAL SOURCES:
+  PromiseKit:
+    :branch: swift-2.0-beta5
+    :git: https://github.com/mxcl/PromiseKit.git
+
+CHECKOUT OPTIONS:
+  PromiseKit:
+    :commit: c90cfc1c578ed09b5d3d21e0ac71aa5020be0899
+    :git: https://github.com/mxcl/PromiseKit.git
+
+SPEC CHECKSUMS:
+  PromiseKit: 6810c48ec19990d3253dc8caf0e05519e7cd39ba
+
+COCOAPODS: 0.38.2

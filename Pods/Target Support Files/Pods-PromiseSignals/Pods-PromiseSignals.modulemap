@@ -1,0 +1,6 @@
+framework module Pods_PromiseSignals {
+  umbrella header "Pods-PromiseSignals-umbrella.h"
+
+  export *
+  module * { export * }
+}
