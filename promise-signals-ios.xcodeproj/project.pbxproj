@@ -11,6 +11,8 @@
 		63666E821BD3ACC2008B001C /* PromiseSignals.h in Headers */ = {isa = PBXBuildFile; fileRef = 63666E811BD3ACC2008B001C /* PromiseSignals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63666E891BD3ACC2008B001C /* PromiseSignals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63666E7E1BD3ACC2008B001C /* PromiseSignals.framework */; settings = {ASSET_TAGS = (); }; };
 		63666E8E1BD3ACC2008B001C /* PromiseSignalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63666E8D1BD3ACC2008B001C /* PromiseSignalsTests.swift */; };
+		63666EA01BD3B19A008B001C /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63666E9C1BD3B076008B001C /* Signal.swift */; settings = {ASSET_TAGS = (); }; };
+		63666EA21BD3B1B0008B001C /* SignalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63666EA11BD3B1B0008B001C /* SignalControl.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		63666E881BD3ACC2008B001C /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63666E8D1BD3ACC2008B001C /* PromiseSignalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseSignalsTests.swift; sourceTree = "<group>"; };
 		63666E8F1BD3ACC2008B001C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63666E9C1BD3B076008B001C /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		63666EA11BD3B1B0008B001C /* SignalControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalControl.swift; sourceTree = "<group>"; };
 		92EDAB72A1638B07CAB42042 /* Pods-PromiseSignals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromiseSignals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PromiseSignals/Pods-PromiseSignals.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				63666E811BD3ACC2008B001C /* PromiseSignals.h */,
+				63666EA11BD3B1B0008B001C /* SignalControl.swift */,
+				63666E9C1BD3B076008B001C /* Signal.swift */,
 				63666E831BD3ACC2008B001C /* Info.plist */,
 			);
 			path = Sources;
@@ -168,6 +174,7 @@
 		63666E751BD3ACC2008B001C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "konoma GmbH";
 				TargetAttributes = {
@@ -252,6 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63666EA01BD3B19A008B001C /* Signal.swift in Sources */,
+				63666EA21BD3B1B0008B001C /* SignalControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -353,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -367,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 92EDAB72A1638B07CAB42042 /* Pods-PromiseSignals.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -377,6 +387,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.konoma.promise-signals-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -384,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E5471E9A2C2B373B93FC02C /* Pods-PromiseSignals.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
