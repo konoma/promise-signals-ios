@@ -13,6 +13,10 @@
 		63666E8E1BD3ACC2008B001C /* PromiseSignalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63666E8D1BD3ACC2008B001C /* PromiseSignalsTests.swift */; };
 		63666EA01BD3B19A008B001C /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63666E9C1BD3B076008B001C /* Signal.swift */; settings = {ASSET_TAGS = (); }; };
 		63666EA21BD3B1B0008B001C /* SignalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63666EA11BD3B1B0008B001C /* SignalControl.swift */; settings = {ASSET_TAGS = (); }; };
+		63666EA61BD3B855008B001C /* SignalObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63666EA51BD3B855008B001C /* SignalObserver.swift */; settings = {ASSET_TAGS = (); }; };
+		63666EA81BD3B877008B001C /* SignalChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63666EA71BD3B877008B001C /* SignalChain.swift */; settings = {ASSET_TAGS = (); }; };
+		63666EAC1BD3B926008B001C /* SignalHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63666EAB1BD3B926008B001C /* SignalHandler.swift */; settings = {ASSET_TAGS = (); }; };
+		63666EAE1BD3B977008B001C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63666EAD1BD3B977008B001C /* Utilities.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		63666EA11BD3B1B0008B001C /* SignalControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalControl.swift; sourceTree = "<group>"; };
 		63666EA31BD3B312008B001C /* PromiseSignals.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PromiseSignals.podspec; sourceTree = "<group>"; };
 		63666EA41BD3B3FA008B001C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		63666EA51BD3B855008B001C /* SignalObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalObserver.swift; sourceTree = "<group>"; };
+		63666EA71BD3B877008B001C /* SignalChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalChain.swift; sourceTree = "<group>"; };
+		63666EAB1BD3B926008B001C /* SignalHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalHandler.swift; sourceTree = "<group>"; };
+		63666EAD1BD3B977008B001C /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		92EDAB72A1638B07CAB42042 /* Pods-PromiseSignals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromiseSignals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PromiseSignals/Pods-PromiseSignals.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,8 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				63666E811BD3ACC2008B001C /* PromiseSignals.h */,
-				63666EA11BD3B1B0008B001C /* SignalControl.swift */,
 				63666E9C1BD3B076008B001C /* Signal.swift */,
+				63666EA71BD3B877008B001C /* SignalChain.swift */,
+				63666EA11BD3B1B0008B001C /* SignalControl.swift */,
+				63666EAB1BD3B926008B001C /* SignalHandler.swift */,
+				63666EA51BD3B855008B001C /* SignalObserver.swift */,
+				63666EAD1BD3B977008B001C /* Utilities.swift */,
 				63666E831BD3ACC2008B001C /* Info.plist */,
 			);
 			path = Sources;
@@ -263,8 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63666EAE1BD3B977008B001C /* Utilities.swift in Sources */,
+				63666EAC1BD3B926008B001C /* SignalHandler.swift in Sources */,
 				63666EA01BD3B19A008B001C /* Signal.swift in Sources */,
+				63666EA81BD3B877008B001C /* SignalChain.swift in Sources */,
 				63666EA21BD3B1B0008B001C /* SignalControl.swift in Sources */,
+				63666EA61BD3B855008B001C /* SignalObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
