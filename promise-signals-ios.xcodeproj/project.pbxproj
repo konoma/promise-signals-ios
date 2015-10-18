@@ -36,6 +36,8 @@
 		63666E8F1BD3ACC2008B001C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63666E9C1BD3B076008B001C /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
 		63666EA11BD3B1B0008B001C /* SignalControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalControl.swift; sourceTree = "<group>"; };
+		63666EA31BD3B312008B001C /* PromiseSignals.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PromiseSignals.podspec; sourceTree = "<group>"; };
+		63666EA41BD3B3FA008B001C /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		92EDAB72A1638B07CAB42042 /* Pods-PromiseSignals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromiseSignals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PromiseSignals/Pods-PromiseSignals.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,8 @@
 		63666E741BD3ACC2008B001C = {
 			isa = PBXGroup;
 			children = (
+				63666EA31BD3B312008B001C /* PromiseSignals.podspec */,
+				63666EA41BD3B3FA008B001C /* LICENSE */,
 				63666E801BD3ACC2008B001C /* Sources */,
 				63666E8C1BD3ACC2008B001C /* Tests */,
 				63666E7F1BD3ACC2008B001C /* Products */,
