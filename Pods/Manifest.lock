@@ -1,21 +1,13 @@
 PODS:
+  - Nimble (3.0.0)
   - PromiseKit/CorePromise (3.0.0)
 
 DEPENDENCIES:
-  - PromiseKit/CorePromise (from `https://github.com/mxcl/PromiseKit.git`, branch
-    `swift-2.0-beta5`)
-
-EXTERNAL SOURCES:
-  PromiseKit:
-    :branch: swift-2.0-beta5
-    :git: https://github.com/mxcl/PromiseKit.git
-
-CHECKOUT OPTIONS:
-  PromiseKit:
-    :commit: c90cfc1c578ed09b5d3d21e0ac71aa5020be0899
-    :git: https://github.com/mxcl/PromiseKit.git
+  - Nimble (~> 3.0)
+  - PromiseKit/CorePromise (~> 3.0)
 
 SPEC CHECKSUMS:
-  PromiseKit: 6810c48ec19990d3253dc8caf0e05519e7cd39ba
+  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  PromiseKit: 665540a1eb43156446872dcf49ed7dee6ebbe13b
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
