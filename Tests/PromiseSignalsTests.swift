@@ -15,7 +15,7 @@ import Nimble
 
 class PromiseSignalsTests: XCTestCase {
     
-    let count = 1000
+    let count = 10000
     
     let signalObserver = SignalObserver()
     let signalControl = SignalControl<Int>()
