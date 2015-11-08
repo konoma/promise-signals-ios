@@ -14,7 +14,6 @@ public class SignalHandler<T> {
     
     private typealias HandlerBlock = (Promise<T>) -> Void
     
-    
     private let signalQueue: dispatch_queue_t
     private weak var signalChain: SignalChain?
     

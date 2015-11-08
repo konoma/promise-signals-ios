@@ -14,10 +14,8 @@ internal class SignalChain {
     private var signalHandlers: [AnyObject] = []
     
     internal func registerSignalHandler<T>(handler: SignalHandler<T>) {
-        objc_sync_enter(self)
-        defer { objc_sync_exit(self) }
-        
-        signalHandlers.append(handler)
+        synchronized(self) {
+            signalHandlers.append(handler)
+        }
     }
 }
-

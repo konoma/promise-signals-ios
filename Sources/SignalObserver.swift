@@ -20,10 +20,7 @@ public class SignalObserver {
     
     public func observe<T>(signal: Signal<T>) -> SignalHandler<T> {
         return synchronized(self) {
-            let signalChain = SignalChain()
-            observingChains[signal.identifier] = signalChain
-            
-            return signal.createHandler(signalChain)
+            return signal.createHandler(signalChainForIdentifier(signal.identifier))
         }
     }
     
@@ -31,6 +28,16 @@ public class SignalObserver {
         synchronized(self) {
             observingChains[signal.identifier] = nil
         }
+    }
+    
+    private func signalChainForIdentifier(identifier: String) -> SignalChain {
+        if let chain = observingChains[identifier] {
+            return chain
+        }
+        
+        let chain = SignalChain()
+        observingChains[identifier] = chain
+        return chain
     }
 }
 
