@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PromiseSignals_Example' do
+  pod 'PromiseSignals', :path => '../'
+
+  target 'PromiseSignals_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
