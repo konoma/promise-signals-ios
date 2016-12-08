@@ -5,7 +5,7 @@ target 'PromiseSignals_Example' do
 
   target 'PromiseSignals_Tests' do
     inherit! :search_paths
-
+    pod 'Nimble'
     
   end
 end
