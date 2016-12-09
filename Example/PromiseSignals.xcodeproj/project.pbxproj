@@ -13,7 +13,6 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		AF96E95C863BD7A41493DB88 /* Pods_PromiseSignals_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F0DB3A735AAFB567AEF0E5 /* Pods_PromiseSignals_Tests.framework */; };
 		DEA18B151DF9EB2500E1BBB9 /* PromiseSignalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27DCF31DF9D2E1003FD956 /* PromiseSignalsTests.swift */; };
 		DEA18B161DF9EB2500E1BBB9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27DCF41DF9D2E1003FD956 /* Utils.swift */; };
@@ -43,7 +42,6 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* PromiseSignals_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PromiseSignals_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		60F0DB3A735AAFB567AEF0E5 /* Pods_PromiseSignals_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PromiseSignals_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D8B576D1CA1D4478588F4E /* Pods-PromiseSignals_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromiseSignals_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PromiseSignals_Example/Pods-PromiseSignals_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B689F675691123D7EC800810 /* Pods_PromiseSignals_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PromiseSignals_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +119,6 @@
 			children = (
 				DE27DCF31DF9D2E1003FD956 /* PromiseSignalsTests.swift */,
 				DE27DCF41DF9D2E1003FD956 /* Utils.swift */,
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -376,7 +373,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				DEA18B151DF9EB2500E1BBB9 /* PromiseSignalsTests.swift in Sources */,
 				DEA18B161DF9EB2500E1BBB9 /* Utils.swift in Sources */,
 			);
