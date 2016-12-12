@@ -1,0 +1,6 @@
+framework module PromiseSignals {
+  umbrella header "PromiseSignals-umbrella.h"
+
+  export *
+  module * { export * }
+}

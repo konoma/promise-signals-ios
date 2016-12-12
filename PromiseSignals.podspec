@@ -1,4 +1,3 @@
-
 Pod::Spec.new do |s|
 
   s.name         = 'PromiseSignals'
@@ -9,15 +8,14 @@ Pod::Spec.new do |s|
 
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { 'Markus Gasser' => 'markus.gasser@konoma.ch' }
-  
+
   s.source       = { :git => 'https://github.com/konoma/promise-signals-ios.git', :tag => '0.1.0' }
   s.platform     = :ios, '8.0'
-  
+
   s.requires_arc = true
   s.frameworks   = 'Foundation'
 
-  s.source_files = 'Sources/**/*.{h,m,mm,swift}'
+  s.source_files = 'PromiseSignals/Classes/**/*'
 
-  s.dependency     'PromiseKit/CorePromise', '~> 3.0'
+  s.dependency     'PromiseKit/CorePromise'
 end
-
