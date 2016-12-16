@@ -19,6 +19,11 @@
 		051E6EAF1E044C2C009B7637 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051E6EAE1E044C2C009B7637 /* PromiseKit.framework */; };
 		051E6EB11E044CD5009B7637 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E6EB01E044CD5009B7637 /* Utils.swift */; };
 		051E6EB31E044DF6009B7637 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051E6EB21E044DF6009B7637 /* Nimble.framework */; };
+		05CE3F2C1E04596A00E51EFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CE3F2B1E04596A00E51EFA /* AppDelegate.swift */; };
+		05CE3F2E1E04596A00E51EFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CE3F2D1E04596A00E51EFA /* ViewController.swift */; };
+		05CE3F311E04596A00E51EFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CE3F2F1E04596A00E51EFA /* Main.storyboard */; };
+		05CE3F331E04596A00E51EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CE3F321E04596A00E51EFA /* Assets.xcassets */; };
+		05CE3F361E04596A00E51EFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CE3F341E04596A00E51EFA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,13 @@
 		051E6EAE1E044C2C009B7637 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		051E6EB01E044CD5009B7637 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		051E6EB21E044DF6009B7637 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		05CE3F291E04596A00E51EFA /* PromiseSignalsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PromiseSignalsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CE3F2B1E04596A00E51EFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05CE3F2D1E04596A00E51EFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05CE3F301E04596A00E51EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05CE3F321E04596A00E51EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05CE3F351E04596A00E51EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05CE3F371E04596A00E51EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05CE3F261E04596A00E51EFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -75,6 +94,7 @@
 			children = (
 				051E6E891E044A83009B7637 /* PromiseSignals */,
 				051E6E941E044A83009B7637 /* PromiseSignalsTests */,
+				05CE3F2A1E04596A00E51EFA /* PromiseSignalsExample */,
 				051E6E881E044A83009B7637 /* Products */,
 				051E6EAD1E044C2C009B7637 /* Frameworks */,
 			);
@@ -85,6 +105,7 @@
 			children = (
 				051E6E871E044A83009B7637 /* PromiseSignals.framework */,
 				051E6E901E044A83009B7637 /* PromiseSignalsTests.xctest */,
+				05CE3F291E04596A00E51EFA /* PromiseSignalsExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +142,19 @@
 				051E6EAE1E044C2C009B7637 /* PromiseKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05CE3F2A1E04596A00E51EFA /* PromiseSignalsExample */ = {
+			isa = PBXGroup;
+			children = (
+				05CE3F2B1E04596A00E51EFA /* AppDelegate.swift */,
+				05CE3F2D1E04596A00E51EFA /* ViewController.swift */,
+				05CE3F2F1E04596A00E51EFA /* Main.storyboard */,
+				05CE3F321E04596A00E51EFA /* Assets.xcassets */,
+				05CE3F341E04596A00E51EFA /* LaunchScreen.storyboard */,
+				05CE3F371E04596A00E51EFA /* Info.plist */,
+			);
+			path = PromiseSignalsExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +209,23 @@
 			productReference = 051E6E901E044A83009B7637 /* PromiseSignalsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		05CE3F281E04596A00E51EFA /* PromiseSignalsExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05CE3F381E04596A00E51EFA /* Build configuration list for PBXNativeTarget "PromiseSignalsExample" */;
+			buildPhases = (
+				05CE3F251E04596A00E51EFA /* Sources */,
+				05CE3F261E04596A00E51EFA /* Frameworks */,
+				05CE3F271E04596A00E51EFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PromiseSignalsExample;
+			productName = PromiseSignalsExample;
+			productReference = 05CE3F291E04596A00E51EFA /* PromiseSignalsExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,6 +247,11 @@
 						DevelopmentTeam = HB5MYM7FV7;
 						ProvisioningStyle = Automatic;
 					};
+					05CE3F281E04596A00E51EFA = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = HB5MYM7FV7;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 051E6E811E044A83009B7637 /* Build configuration list for PBXProject "PromiseSignals" */;
@@ -204,6 +260,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 051E6E7D1E044A83009B7637;
 			productRefGroup = 051E6E881E044A83009B7637 /* Products */;
@@ -212,6 +269,7 @@
 			targets = (
 				051E6E861E044A83009B7637 /* PromiseSignals */,
 				051E6E8F1E044A83009B7637 /* PromiseSignalsTests */,
+				05CE3F281E04596A00E51EFA /* PromiseSignalsExample */,
 			);
 		};
 /* End PBXProject section */
@@ -228,6 +286,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CE3F271E04596A00E51EFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05CE3F361E04596A00E51EFA /* LaunchScreen.storyboard in Resources */,
+				05CE3F331E04596A00E51EFA /* Assets.xcassets in Resources */,
+				05CE3F311E04596A00E51EFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +360,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05CE3F251E04596A00E51EFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05CE3F2E1E04596A00E51EFA /* ViewController.swift in Sources */,
+				05CE3F2C1E04596A00E51EFA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -301,6 +378,25 @@
 			targetProxy = 051E6E921E044A83009B7637 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05CE3F2F1E04596A00E51EFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05CE3F301E04596A00E51EFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05CE3F341E04596A00E51EFA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05CE3F351E04596A00E51EFA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		051E6E991E044A83009B7637 /* Debug */ = {
@@ -405,6 +501,7 @@
 		051E6E9C1E044A83009B7637 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -418,6 +515,7 @@
 				);
 				INFOPLIST_FILE = PromiseSignals/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.konoma.PromiseSignals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,6 +528,7 @@
 		051E6E9D1E044A83009B7637 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -443,6 +542,7 @@
 				);
 				INFOPLIST_FILE = PromiseSignals/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.konoma.PromiseSignals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,6 +585,32 @@
 			};
 			name = Release;
 		};
+		05CE3F391E04596A00E51EFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HB5MYM7FV7;
+				INFOPLIST_FILE = PromiseSignalsExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.konoma.PromiseSignalsExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		05CE3F3A1E04596A00E51EFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HB5MYM7FV7;
+				INFOPLIST_FILE = PromiseSignalsExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.konoma.PromiseSignalsExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -514,6 +640,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		05CE3F381E04596A00E51EFA /* Build configuration list for PBXNativeTarget "PromiseSignalsExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CE3F391E04596A00E51EFA /* Debug */,
+				05CE3F3A1E04596A00E51EFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

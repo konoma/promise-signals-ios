@@ -21,7 +21,7 @@ open class Signal<T>: CustomStringConvertible {
     internal init(initial: T?) {
         let identifier = UUID().uuidString
         
-        self.signalQueue = DispatchQueue(label: "\(identifier).signal-queue", attributes: [])
+        self.signalQueue = DispatchQueue(label: "\(identifier).signal-queue")
         self.identifier = identifier
         
         if let value = initial {
@@ -32,14 +32,14 @@ open class Signal<T>: CustomStringConvertible {
     
     // MARK: - Creating New Handlers
     
-    internal func createHandler(_ signalChain: SignalChain) -> SignalHandler<T> {
+    internal func createHandler(signalChain: SignalChain) -> SignalHandler<T> {
         let signalHandler = SignalHandler<T>(signalQueue: signalQueue, registerOnChain: signalChain)
         
         onSignalsQueue {
             self.handlers.append(WeakRef(signalHandler))
-            
+
             if let result = self.currentResult {
-                signalHandler.notifyNewPromise(result.promise())
+                signalHandler.notify(newPromise: result.promise())
             }
         }
         
@@ -49,7 +49,7 @@ open class Signal<T>: CustomStringConvertible {
     
     // MARK: - Notify Values and Errors
     
-    internal func notifyResult(_ result: Result<T>) {
+    internal func notify(result: Result<T>) {
         onSignalsQueue {
             // store the current result
             self.currentResult = result
@@ -57,7 +57,7 @@ open class Signal<T>: CustomStringConvertible {
             // pass all handlers a new promise
             let promise = result.promise()
             for handlerRef in self.handlers {
-                handlerRef.value?.notifyNewPromise(promise)
+                handlerRef.value?.notify(newPromise: promise)
             }
             
             // prune deallocated SignalHandlers

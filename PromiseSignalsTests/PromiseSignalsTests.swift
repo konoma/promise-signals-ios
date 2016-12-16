@@ -30,7 +30,7 @@ class PromiseSignalsTests: XCTestCase {
         }
         
         doInBackgroundSerial(count: count) { i in
-            self.signalControl.notifyValue(i)
+            self.signalControl.notify(value: i)
         }
         
         expect(notifiedValues).toEventually(equal(expectedValues), timeout: 2)
@@ -41,7 +41,7 @@ class PromiseSignalsTests: XCTestCase {
         let expectedValues = [count-1]
 
         doInBackgroundSerial(count: count) { i in
-            self.signalControl.notifyValue(i)
+            self.signalControl.notify(value: i)
         }
         
         signalObserver.observe(signal).then { value in
@@ -60,7 +60,7 @@ class PromiseSignalsTests: XCTestCase {
         }
 
         doInBackgroundParallel(count: count) { i in
-            self.signalControl.notifyValue(i)
+            self.signalControl.notify(value: i)
         }
         
         expect(notifiedValues).toEventually(equal(expectedValues), timeout: 2)
@@ -68,9 +68,9 @@ class PromiseSignalsTests: XCTestCase {
     
     func testSignalAppliedLastReportsLastValueInParallel() {
         var notifiedValues = Set<Int>()
-        
+
         doInBackgroundParallel(count: count) { i in
-            self.signalControl.notifyValue(i)
+            self.signalControl.notify(value: i)
         }
         
         signalObserver.observe(signal).then { value in
@@ -78,14 +78,14 @@ class PromiseSignalsTests: XCTestCase {
         }
 
         expect(notifiedValues.count).toEventually(equal(count), timeout: 2.0)
-        expect(notifiedValues.min()).toEventually(equal(0), timeout: 2.0)
-        expect(notifiedValues.max()).toEventually(equal(count - 1), timeout: 2.0)
+        expect(notifiedValues.min()).toEventually(equal(1), timeout: 2.0)
+        expect(notifiedValues.max()).toEventually(equal(count), timeout: 2.0)
     }
     
     func testObservingUsingMultipleHandlersGoesWellIfAppliedFirst() {
         var reported = 0
         
-        self.signalControl.notifyValue(10)
+        self.signalControl.notify(value: 10)
         
         doInBackgroundParallel(count: count) { i in
             self.signalObserver.observe(self.signal).then { value in

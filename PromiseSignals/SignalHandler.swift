@@ -32,14 +32,14 @@ open class SignalHandler<T> {
     
     // MARK: - Notify Results
     
-    internal func notifyNewPromise(_ promise: Promise<T>) {
+    internal func notify(newPromise: Promise<T>) {
         // must be called on the signal queue
         
-        currentPromise = promise
+        currentPromise = newPromise
         
         // apply all handler blocks to the new promise
         for handler in handlers {
-            handler(promise)
+            handler(newPromise)
         }
     }
     
@@ -137,7 +137,7 @@ open class SignalHandler<T> {
             // transform the promise and apply to a child if necessary
             let handlerBlock: HandlerBlock = { promise in
                 if let childPromise = transformer(promise) {
-                    weakChild?.notifyNewPromise(childPromise)
+                    weakChild?.notify(newPromise: childPromise)
                 }
             }
             
