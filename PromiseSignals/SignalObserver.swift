@@ -10,30 +10,31 @@ import Foundation
 
 
 public class SignalObserver {
-    
+
     fileprivate var observingChains: [String: SignalChain] = [:]
-    
-    public init() {}
-    
+
+    public init() {
+    }
+
     public func observe<T>(_ signal: Signal<T>) -> SignalHandler<T> {
         return synchronized(self) {
             return signal.createHandler(signalChain: signalChain(for: signal.identifier))
         }
     }
-    
+
     public func stopObserving<T>(_ signal: Signal<T>) {
         synchronized(self) {
-            observingChains[signal.identifier] = nil
+            self.observingChains[signal.identifier] = nil
         }
     }
-    
+
     fileprivate func signalChain(for identifier: String) -> SignalChain {
-        if let chain = observingChains[identifier] {
+        if let chain = self.observingChains[identifier] {
             return chain
         }
-        
+
         let chain = SignalChain()
-        observingChains[identifier] = chain
+        self.observingChains[identifier] = chain
         return chain
     }
 }
@@ -48,18 +49,18 @@ public extension NSObject {
             if let signalObserver = objc_getAssociatedObject(self, &NSObject.defaultObserverKey) as? SignalObserver {
                 return signalObserver
             }
-            
+
             let observer = SignalObserver()
             objc_setAssociatedObject(self, &NSObject.defaultObserverKey, observer, .OBJC_ASSOCIATION_RETAIN)
             return observer
         }
     }
-    
+
     public func observe<T>(_ signal: Signal<T>) -> SignalHandler<T> {
-        return defaultObserver.observe(signal)
+        return self.defaultObserver.observe(signal)
     }
-    
+
     public func stopObserving<T>(_ signal: Signal<T>) {
-        defaultObserver.stopObserving(signal)
+        self.defaultObserver.stopObserving(signal)
     }
 }

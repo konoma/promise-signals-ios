@@ -11,10 +11,10 @@ import PromiseKit
 
 
 internal enum Result<T> {
-    
+
     case value(T)
     case error(Error)
-    
+
     internal func promise() -> Promise<T> {
         switch self {
         case .value(let value): return Promise(value: value)
@@ -27,7 +27,7 @@ internal enum Result<T> {
 internal class WeakRef<T: AnyObject> {
 
     weak var value: T?
-    
+
     internal init(_ value: T?) {
         self.value = value
     }
@@ -37,6 +37,6 @@ internal class WeakRef<T: AnyObject> {
 internal func synchronized<T>(_ lock: AnyObject, criticalSection: () throws -> T) rethrows -> T {
     objc_sync_enter(lock)
     defer { objc_sync_exit(lock) }
-    
+
     return try criticalSection()
 }

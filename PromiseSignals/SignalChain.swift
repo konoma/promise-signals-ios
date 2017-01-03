@@ -10,12 +10,12 @@ import Foundation
 
 
 internal class SignalChain {
-    
+
     fileprivate var signalHandlers: [AnyObject] = []
-    
+
     internal func registerSignalHandler<T>(_ handler: SignalHandler<T>) {
         synchronized(self) {
-            signalHandlers.append(handler)
+            self.signalHandlers.append(handler)
         }
     }
 }

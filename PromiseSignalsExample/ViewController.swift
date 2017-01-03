@@ -78,4 +78,3 @@ class ViewController: UIViewController {
         return numValue
     }
 }
-

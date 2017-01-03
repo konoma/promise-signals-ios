@@ -10,26 +10,26 @@ import Foundation
 
 
 public class SignalControl<T> {
-    
+
     public let signal: Signal<T>
-    
+
     public convenience init(initialValue: T) {
         self.init(initial: initialValue)
     }
-    
+
     public convenience init() {
         self.init(initial: nil)
     }
-    
+
     fileprivate init(initial: T?) {
         self.signal = Signal(initial: initial)
     }
-    
+
     public func notify(value: T) {
-        signal.notify(result: .value(value))
+        self.signal.notify(result: .value(value))
     }
-    
+
     public func notify(error: Error) {
-        signal.notify(result: .error(error))
+        self.signal.notify(result: .error(error))
     }
 }

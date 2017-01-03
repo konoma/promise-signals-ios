@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "051E6E861E044A83009B7637"
-               BuildableName = "PromiseSignals.framework"
-               BlueprintName = "PromiseSignals"
+               BlueprintIdentifier = "05CE3F281E04596A00E51EFA"
+               BuildableName = "PromiseSignalsExample.app"
+               BlueprintName = "PromiseSignalsExample"
                ReferencedContainer = "container:PromiseSignals.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "05CE3F281E04596A00E51EFA"
-               BuildableName = "PromiseSignalsExample.app"
-               BlueprintName = "PromiseSignalsExample"
+               BlueprintIdentifier = "051E6E8F1E044A83009B7637"
+               BuildableName = "PromiseSignalsTests.xctest"
+               BlueprintName = "PromiseSignalsTests"
                ReferencedContainer = "container:PromiseSignals.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,6 +42,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "051E6E8F1E044A83009B7637"
+               BuildableName = "PromiseSignalsTests.xctest"
+               BlueprintName = "PromiseSignalsTests"
+               ReferencedContainer = "container:PromiseSignals.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

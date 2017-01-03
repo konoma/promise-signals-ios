@@ -65,6 +65,9 @@
 /* Begin PBXFileReference section */
 		050F288F1E1BC5B400EE7D4E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		050F289D1E1BCC4A00EE7D4E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		050F289F1E1BCDF200EE7D4E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		050F28A01E1BCDFC00EE7D4E /* PromiseSignals.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PromiseSignals.podspec; sourceTree = "<group>"; };
+		050F28A21E1BD34200EE7D4E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		051E6E871E044A83009B7637 /* PromiseSignals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseSignals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		051E6E8A1E044A83009B7637 /* PromiseSignals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PromiseSignals.h; sourceTree = "<group>"; };
 		051E6E8B1E044A83009B7637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,6 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				050F288F1E1BC5B400EE7D4E /* README.md */,
+				050F289F1E1BCDF200EE7D4E /* LICENSE */,
+				050F28A01E1BCDFC00EE7D4E /* PromiseSignals.podspec */,
+				050F28A21E1BD34200EE7D4E /* .swiftlint.yml */,
 				051E6E891E044A83009B7637 /* PromiseSignals */,
 				051E6E941E044A83009B7637 /* PromiseSignalsTests */,
 				05CE3F2A1E04596A00E51EFA /* PromiseSignalsExample */,
@@ -177,12 +183,12 @@
 		05CE3F2A1E04596A00E51EFA /* PromiseSignalsExample */ = {
 			isa = PBXGroup;
 			children = (
-				05CE3F2B1E04596A00E51EFA /* AppDelegate.swift */,
-				05CE3F2D1E04596A00E51EFA /* ViewController.swift */,
+				05CE3F371E04596A00E51EFA /* Info.plist */,
+				05CE3F321E04596A00E51EFA /* Assets.xcassets */,
 				050F289D1E1BCC4A00EE7D4E /* LaunchScreen.storyboard */,
 				05CE3F2F1E04596A00E51EFA /* Main.storyboard */,
-				05CE3F321E04596A00E51EFA /* Assets.xcassets */,
-				05CE3F371E04596A00E51EFA /* Info.plist */,
+				05CE3F2B1E04596A00E51EFA /* AppDelegate.swift */,
+				05CE3F2D1E04596A00E51EFA /* ViewController.swift */,
 			);
 			path = PromiseSignalsExample;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 			buildConfigurationList = 051E6E9B1E044A83009B7637 /* Build configuration list for PBXNativeTarget "PromiseSignals" */;
 			buildPhases = (
 				051E6E821E044A83009B7637 /* Sources */,
+				050F28A11E1BD2ED00EE7D4E /* Lint Swift Files */,
 				051E6E831E044A83009B7637 /* Frameworks */,
 				051E6E841E044A83009B7637 /* Headers */,
 				051E6E851E044A83009B7637 /* Resources */,
@@ -345,6 +352,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			showEnvVarsInLog = 0;
+		};
+		050F28A11E1BD2ED00EE7D4E /* Lint Swift Files */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Lint Swift Files";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 			showEnvVarsInLog = 0;
 		};
 		05CE3F241E044EF100E51EFA /* [Carthage] Copy Frameworks */ = {
