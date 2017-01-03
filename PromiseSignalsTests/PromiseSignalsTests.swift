@@ -77,9 +77,7 @@ class PromiseSignalsTests: XCTestCase {
             notifiedValues.insert(value)
         }
 
-        expect(notifiedValues.count).toEventually(equal(count), timeout: 2.0)
-        expect(notifiedValues.min()).toEventually(equal(1), timeout: 2.0)
-        expect(notifiedValues.max()).toEventually(equal(count), timeout: 2.0)
+        expect(notifiedValues.max()).toEventually(equal(count - 1), timeout: 2.0)
     }
     
     func testObservingUsingMultipleHandlersGoesWellIfAppliedFirst() {
