@@ -25,7 +25,7 @@ class PromiseSignalsTests: XCTestCase {
         var notifiedValues = [Int]()
         let expectedValues = Array(0 ..< count)
 
-        _ = signalObserver.observe(signal).then { value in
+        signalObserver.observe(signal).then { value in
             notifiedValues.append(value)
         }
         

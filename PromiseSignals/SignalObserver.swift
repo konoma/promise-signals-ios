@@ -9,28 +9,25 @@
 import Foundation
 
 
-private var defaultObserverKey: UInt = 0
-
-
-open class SignalObserver {
+public class SignalObserver {
     
     fileprivate var observingChains: [String: SignalChain] = [:]
     
     public init() {}
     
-    open func observe<T>(_ signal: Signal<T>) -> SignalHandler<T> {
-        return synchronized(lock: self) {
-            return signal.createHandler(signalChainForIdentifier(signal.identifier))
+    public func observe<T>(_ signal: Signal<T>) -> SignalHandler<T> {
+        return synchronized(self) {
+            return signal.createHandler(signalChain: signalChain(for: signal.identifier))
         }
     }
     
-    open func stopObserving<T>(_ signal: Signal<T>) {
-        synchronized(lock: self) {
+    public func stopObserving<T>(_ signal: Signal<T>) {
+        synchronized(self) {
             observingChains[signal.identifier] = nil
         }
     }
     
-    fileprivate func signalChainForIdentifier(_ identifier: String) -> SignalChain {
+    fileprivate func signalChain(for identifier: String) -> SignalChain {
         if let chain = observingChains[identifier] {
             return chain
         }
@@ -42,16 +39,18 @@ open class SignalObserver {
 }
 
 
-extension NSObject {
-    
+public extension NSObject {
+
+    fileprivate static var defaultObserverKey: UInt = 0
+
     fileprivate var defaultObserver: SignalObserver {
-        return synchronized(lock: self) {
-            if let signalObserver = objc_getAssociatedObject(self, &defaultObserverKey) as? SignalObserver {
+        return synchronized(self) {
+            if let signalObserver = objc_getAssociatedObject(self, &NSObject.defaultObserverKey) as? SignalObserver {
                 return signalObserver
             }
             
             let observer = SignalObserver()
-            objc_setAssociatedObject(self, &defaultObserverKey, observer, .OBJC_ASSOCIATION_RETAIN)
+            objc_setAssociatedObject(self, &NSObject.defaultObserverKey, observer, .OBJC_ASSOCIATION_RETAIN)
             return observer
         }
     }

@@ -14,7 +14,7 @@ internal class SignalChain {
     fileprivate var signalHandlers: [AnyObject] = []
     
     internal func registerSignalHandler<T>(_ handler: SignalHandler<T>) {
-        synchronized(lock: self) {
+        synchronized(self) {
             signalHandlers.append(handler)
         }
     }

@@ -10,7 +10,7 @@ import Foundation
 import PromiseKit
 
 
-open class SignalHandler<T> {
+public class SignalHandler<T> {
     
     fileprivate typealias HandlerBlock = (Promise<T>) -> Void
     
@@ -46,7 +46,7 @@ open class SignalHandler<T> {
     
     // MARK: - Promise Methods
     @discardableResult
-    open func then<U>(on q: DispatchQueue = DispatchQueue.main, _ body: @escaping (T) throws -> Promise<U>) -> SignalHandler<U> {
+    public func then<U>(on q: DispatchQueue = DispatchQueue.main, _ body: @escaping (T) throws -> Promise<U>) -> SignalHandler<U> {
         let signalHandler = SignalHandler<U>(signalQueue: signalQueue, registerOnChain: signalChain!)
         
         applyAndRegisterTransformer(nextHandler: signalHandler) { promise in
@@ -57,7 +57,7 @@ open class SignalHandler<T> {
     }
 
     @discardableResult
-    open func then<U>(on q: DispatchQueue = DispatchQueue.main, _ body: @escaping (T) throws -> U) -> SignalHandler<U> {
+    public func then<U>(on q: DispatchQueue = DispatchQueue.main, _ body: @escaping (T) throws -> U) -> SignalHandler<U> {
         let signalHandler = SignalHandler<U>(signalQueue: signalQueue, registerOnChain: signalChain!)
         
         applyAndRegisterTransformer(nextHandler: signalHandler) { promise in
@@ -68,17 +68,17 @@ open class SignalHandler<T> {
     }
 
     @discardableResult
-    open func thenInBackground<U>(_ body: @escaping (T) throws -> U) -> SignalHandler<U> {
+    public func thenInBackground<U>(_ body: @escaping (T) throws -> U) -> SignalHandler<U> {
         return then(on: DispatchQueue.global(qos: .background), body)
     }
 
     @discardableResult
-    open func thenInBackground<U>(_ body: @escaping (T) throws -> Promise<U>) -> SignalHandler<U> {
+    public func thenInBackground<U>(_ body: @escaping (T) throws -> Promise<U>) -> SignalHandler<U> {
         return then(on: DispatchQueue.global(qos: .background), body)
     }
     
     @discardableResult
-    open func error(policy: CatchPolicy = .allErrorsExceptCancellation, _ body: @escaping (Error) -> Void) {
+    public func `catch`(policy: CatchPolicy = .allErrorsExceptCancellation, _ body: @escaping (Error) -> Void) {
         applyAndRegisterTransformer { promise in
             promise.catch(policy: policy, execute: body)
             return
@@ -86,7 +86,7 @@ open class SignalHandler<T> {
     }
     
     @discardableResult
-    open func recover(on q: DispatchQueue = DispatchQueue.main, _ body: @escaping (Error) throws -> Promise<T>) -> SignalHandler<T> {
+    public func recover(on q: DispatchQueue = DispatchQueue.main, _ body: @escaping (Error) throws -> Promise<T>) -> SignalHandler<T> {
         let signalHandler = SignalHandler(signalQueue: signalQueue, registerOnChain: signalChain!)
         
         applyAndRegisterTransformer(nextHandler: signalHandler) { promise in
@@ -97,7 +97,7 @@ open class SignalHandler<T> {
     }
     
     @discardableResult
-    open func recover(on q: DispatchQueue = DispatchQueue.main, _ body: @escaping (Error) throws -> T) -> SignalHandler<T> {
+    public func recover(on q: DispatchQueue = DispatchQueue.main, _ body: @escaping (Error) throws -> T) -> SignalHandler<T> {
         let signalHandler = SignalHandler(signalQueue: signalQueue, registerOnChain: signalChain!)
         
         applyAndRegisterTransformer(nextHandler: signalHandler) { promise in
@@ -108,7 +108,7 @@ open class SignalHandler<T> {
     }
     
     @discardableResult
-    open func always(on q: DispatchQueue = DispatchQueue.main, _ body: @escaping () -> Void) -> SignalHandler<T> {
+    public func always(on q: DispatchQueue = DispatchQueue.main, _ body: @escaping () -> Void) -> SignalHandler<T> {
         let signalHandler = SignalHandler(signalQueue: signalQueue, registerOnChain: signalChain!)
         
         applyAndRegisterTransformer(nextHandler: signalHandler) { promise in

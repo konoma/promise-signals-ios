@@ -25,6 +25,7 @@ internal enum Result<T> {
 
 
 internal class WeakRef<T: AnyObject> {
+
     weak var value: T?
     
     internal init(_ value: T?) {
@@ -33,7 +34,7 @@ internal class WeakRef<T: AnyObject> {
 }
 
 
-internal func synchronized<T>(lock: AnyObject, criticalSection: () throws -> T) rethrows -> T {
+internal func synchronized<T>(_ lock: AnyObject, criticalSection: () throws -> T) rethrows -> T {
     objc_sync_enter(lock)
     defer { objc_sync_exit(lock) }
     

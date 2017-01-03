@@ -9,7 +9,7 @@
 import Foundation
 
 
-open class Signal<T>: CustomStringConvertible {
+public class Signal<T>: CustomStringConvertible {
     
     internal let identifier: String
     
@@ -68,7 +68,7 @@ open class Signal<T>: CustomStringConvertible {
     
     // MARK: - CustomStringConvertible
     
-    open var description: String {
+    public var description: String {
         return "Signal(identifier=\(identifier))"
     }
     
