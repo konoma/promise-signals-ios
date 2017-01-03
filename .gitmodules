@@ -1,3 +1,5 @@
 [submodule "Carthage/Checkouts/PromiseKit"]
 	path = Carthage/Checkouts/PromiseKit
 	url = https://github.com/mxcl/PromiseKit.git
+[submodule "Carthage/Checkouts/Nimble"]
+	url = https://github.com/Quick/Nimble.git

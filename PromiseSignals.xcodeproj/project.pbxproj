@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050F28901E1BC68700EE7D4E /* PromiseSignals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051E6E871E044A83009B7637 /* PromiseSignals.framework */; };
+		050F28921E1BC68C00EE7D4E /* PromiseSignals.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 051E6E871E044A83009B7637 /* PromiseSignals.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		050F289B1E1BCBCF00EE7D4E /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 051E6EAE1E044C2C009B7637 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		050F289C1E1BCC1300EE7D4E /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051E6EAE1E044C2C009B7637 /* PromiseKit.framework */; };
+		050F289E1E1BCC4A00EE7D4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050F289D1E1BCC4A00EE7D4E /* LaunchScreen.storyboard */; };
 		051E6E911E044A83009B7637 /* PromiseSignals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051E6E871E044A83009B7637 /* PromiseSignals.framework */; };
 		051E6E961E044A83009B7637 /* PromiseSignalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E6E951E044A83009B7637 /* PromiseSignalsTests.swift */; };
 		051E6E981E044A83009B7637 /* PromiseSignals.h in Headers */ = {isa = PBXBuildFile; fileRef = 051E6E8A1E044A83009B7637 /* PromiseSignals.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,10 +28,16 @@
 		05CE3F2E1E04596A00E51EFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CE3F2D1E04596A00E51EFA /* ViewController.swift */; };
 		05CE3F311E04596A00E51EFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CE3F2F1E04596A00E51EFA /* Main.storyboard */; };
 		05CE3F331E04596A00E51EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CE3F321E04596A00E51EFA /* Assets.xcassets */; };
-		05CE3F361E04596A00E51EFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CE3F341E04596A00E51EFA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		050F28931E1BC68C00EE7D4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 051E6E7E1E044A83009B7637 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 051E6E861E044A83009B7637;
+			remoteInfo = PromiseSignals;
+		};
 		051E6E921E044A83009B7637 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 051E6E7E1E044A83009B7637 /* Project object */;
@@ -36,7 +47,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		050F28951E1BC68C00EE7D4E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				050F28921E1BC68C00EE7D4E /* PromiseSignals.framework in Embed Frameworks */,
+				050F289B1E1BCBCF00EE7D4E /* PromiseKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		050F288F1E1BC5B400EE7D4E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		050F289D1E1BCC4A00EE7D4E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		051E6E871E044A83009B7637 /* PromiseSignals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseSignals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		051E6E8A1E044A83009B7637 /* PromiseSignals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PromiseSignals.h; sourceTree = "<group>"; };
 		051E6E8B1E044A83009B7637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,7 +85,6 @@
 		05CE3F2D1E04596A00E51EFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		05CE3F301E04596A00E51EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		05CE3F321E04596A00E51EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05CE3F351E04596A00E51EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CE3F371E04596A00E51EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				050F28901E1BC68700EE7D4E /* PromiseSignals.framework in Frameworks */,
+				050F289C1E1BCC1300EE7D4E /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +121,7 @@
 		051E6E7D1E044A83009B7637 = {
 			isa = PBXGroup;
 			children = (
+				050F288F1E1BC5B400EE7D4E /* README.md */,
 				051E6E891E044A83009B7637 /* PromiseSignals */,
 				051E6E941E044A83009B7637 /* PromiseSignalsTests */,
 				05CE3F2A1E04596A00E51EFA /* PromiseSignalsExample */,
@@ -149,9 +179,9 @@
 			children = (
 				05CE3F2B1E04596A00E51EFA /* AppDelegate.swift */,
 				05CE3F2D1E04596A00E51EFA /* ViewController.swift */,
+				050F289D1E1BCC4A00EE7D4E /* LaunchScreen.storyboard */,
 				05CE3F2F1E04596A00E51EFA /* Main.storyboard */,
 				05CE3F321E04596A00E51EFA /* Assets.xcassets */,
-				05CE3F341E04596A00E51EFA /* LaunchScreen.storyboard */,
 				05CE3F371E04596A00E51EFA /* Info.plist */,
 			);
 			path = PromiseSignalsExample;
@@ -179,7 +209,6 @@
 				051E6E831E044A83009B7637 /* Frameworks */,
 				051E6E841E044A83009B7637 /* Headers */,
 				051E6E851E044A83009B7637 /* Resources */,
-				05CE3F231E044ECD00E51EFA /* [Carthage] Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,10 +245,13 @@
 				05CE3F251E04596A00E51EFA /* Sources */,
 				05CE3F261E04596A00E51EFA /* Frameworks */,
 				05CE3F271E04596A00E51EFA /* Resources */,
+				050F28951E1BC68C00EE7D4E /* Embed Frameworks */,
+				050F28961E1BC7E800EE7D4E /* [Carthage] Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				050F28941E1BC68C00EE7D4E /* PBXTargetDependency */,
 			);
 			name = PromiseSignalsExample;
 			productName = PromiseSignalsExample;
@@ -238,18 +270,15 @@
 				TargetAttributes = {
 					051E6E861E044A83009B7637 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = HB5MYM7FV7;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					051E6E8F1E044A83009B7637 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = HB5MYM7FV7;
 						ProvisioningStyle = Automatic;
 					};
 					05CE3F281E04596A00E51EFA = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = HB5MYM7FV7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -293,7 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05CE3F361E04596A00E51EFA /* LaunchScreen.storyboard in Resources */,
+				050F289E1E1BCC4A00EE7D4E /* LaunchScreen.storyboard in Resources */,
 				05CE3F331E04596A00E51EFA /* Assets.xcassets in Resources */,
 				05CE3F311E04596A00E51EFA /* Main.storyboard in Resources */,
 			);
@@ -302,7 +331,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05CE3F231E044ECD00E51EFA /* [Carthage] Copy Frameworks */ = {
+		050F28961E1BC7E800EE7D4E /* [Carthage] Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -372,6 +401,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		050F28941E1BC68C00EE7D4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 051E6E861E044A83009B7637 /* PromiseSignals */;
+			targetProxy = 050F28931E1BC68C00EE7D4E /* PBXContainerItemProxy */;
+		};
 		051E6E931E044A83009B7637 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 051E6E861E044A83009B7637 /* PromiseSignals */;
@@ -386,14 +420,6 @@
 				05CE3F301E04596A00E51EFA /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		05CE3F341E04596A00E51EFA /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				05CE3F351E04596A00E51EFA /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -442,7 +468,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -505,7 +530,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = HB5MYM7FV7;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -532,7 +557,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = HB5MYM7FV7;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -555,7 +580,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = HB5MYM7FV7;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -572,7 +597,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = HB5MYM7FV7;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -588,9 +613,15 @@
 		05CE3F391E04596A00E51EFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HB5MYM7FV7;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PromiseSignalsExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.konoma.PromiseSignalsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -601,9 +632,15 @@
 		05CE3F3A1E04596A00E51EFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HB5MYM7FV7;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PromiseSignalsExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.konoma.PromiseSignalsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -648,6 +685,7 @@
 				05CE3F3A1E04596A00E51EFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendSignalButtonTapped() {
-        signalControl.notifyValue(numberToSend)
+        signalControl.notify(value: numberToSend)
     }
 
     func incrementPositiveCounter(change: Int) {
