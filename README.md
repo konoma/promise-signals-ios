@@ -5,7 +5,7 @@
 
 # PromiseSignals
 
-PromiseSignals is a library that extends PromiseKit with Signals that may resolve multiple times.
+PromiseSignals is a library that extends [PromiseKit](https://github.com/mxcl/PromiseKit) with Signals that may resolve multiple times.
 
 
 ## Example
