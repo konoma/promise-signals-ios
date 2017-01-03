@@ -1,9 +1,10 @@
 # PromiseSignals
 
-[![CI Status](http://img.shields.io/travis/Drew Pomerleau/PromiseSignals.svg?style=flat)](https://travis-ci.org/Drew Pomerleau/PromiseSignals)
-[![Version](https://img.shields.io/cocoapods/v/PromiseSignals.svg?style=flat)](http://cocoapods.org/pods/PromiseSignals)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Pod Version](https://img.shields.io/cocoapods/v/PromiseSignals.svg?style=flat)](http://cocoapods.org/pods/PromiseSignals)
 [![License](https://img.shields.io/cocoapods/l/PromiseSignals.svg?style=flat)](http://cocoapods.org/pods/PromiseSignals)
 [![Platform](https://img.shields.io/cocoapods/p/PromiseSignals.svg?style=flat)](http://cocoapods.org/pods/PromiseSignals)
+
 
 ## Example
 

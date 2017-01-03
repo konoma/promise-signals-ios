@@ -1,0 +1,9 @@
+included:
+  - PromiseSignals
+  - PromiseSignalsExample
+  - PromiseSignalsTests
+
+line_length: 140
+
+disabled_rules:
+  - vertical_whitespace
