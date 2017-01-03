@@ -1,30 +1,42 @@
-# PromiseSignals
-
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Pod Version](https://img.shields.io/cocoapods/v/PromiseSignals.svg?style=flat)](http://cocoapods.org/pods/PromiseSignals)
 [![License](https://img.shields.io/cocoapods/l/PromiseSignals.svg?style=flat)](http://cocoapods.org/pods/PromiseSignals)
 [![Platform](https://img.shields.io/cocoapods/p/PromiseSignals.svg?style=flat)](http://cocoapods.org/pods/PromiseSignals)
 
+# PromiseSignals
+
+PromiseSignals is a library that extends PromiseKit with Signals that may resolve multiple times.
+
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run the `Example App` schema.
 
-## Requirements
 
 ## Installation
 
-PromiseSignals is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Carthage
+
+To install this library via [Carthage](https://github.com/Carthage/Carthage) add the following to your `Cartfile`:
 
 ```ruby
-pod "PromiseSignals"
+github "konoma/promise-signals-ios" ~> 0.2
 ```
 
-## Author
+Then run the standard `carthage update` process.
 
-Drew Pomerleau, dpomerleau@paypalcorp.com
+
+### CocoaPods
+
+To install this library via [CocoaPods](https://cocoapods.org) add the following to your `Podfile`:
+
+```ruby
+pod 'PromiseSignals', '~> 0.2.0'
+```
+
+Then run the standard `pod update` process.
+
 
 ## License
 
-PromiseSignals is available under the MIT license. See the LICENSE file for more info.
+Matisse is released under the [MIT License](LICENSE).
