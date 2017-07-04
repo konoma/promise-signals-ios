@@ -29,8 +29,8 @@ class PromiseSignalsTests: XCTestCase {
             notifiedValues.append(value)
         }
 
-        doInBackgroundSerial(count: count) { i in
-            self.signalControl.notify(value: i)
+        doInBackgroundSerial(count: count) { value in
+            self.signalControl.notify(value: value)
         }
 
         expect(notifiedValues).toEventually(equal(expectedValues), timeout: 2)
@@ -40,8 +40,8 @@ class PromiseSignalsTests: XCTestCase {
         var notifiedValues = [Int]()
         let expectedValues = [count-1]
 
-        doInBackgroundSerial(count: count) { i in
-            self.signalControl.notify(value: i)
+        doInBackgroundSerial(count: count) { value in
+            self.signalControl.notify(value: value)
         }
 
         signalObserver.observe(signal).then { value in
@@ -59,8 +59,8 @@ class PromiseSignalsTests: XCTestCase {
             notifiedValues.insert(value)
         }
 
-        doInBackgroundParallel(count: count) { i in
-            self.signalControl.notify(value: i)
+        doInBackgroundParallel(count: count) { value in
+            self.signalControl.notify(value: value)
         }
 
         expect(notifiedValues).toEventually(equal(expectedValues), timeout: 2)
@@ -69,8 +69,8 @@ class PromiseSignalsTests: XCTestCase {
     func testSignalAppliedLastReportsLastValueInParallel() {
         var notifiedValues = Set<Int>()
 
-        doInBackgroundParallel(count: count) { i in
-            self.signalControl.notify(value: i)
+        doInBackgroundParallel(count: count) { value in
+            self.signalControl.notify(value: value)
         }
 
         signalObserver.observe(signal).then { value in

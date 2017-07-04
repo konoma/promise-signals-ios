@@ -77,7 +77,6 @@ public class SignalHandler<T> {
         return self.then(on: DispatchQueue.global(qos: .background), body)
     }
 
-    @discardableResult
     public func `catch`(policy: CatchPolicy = .allErrorsExceptCancellation, _ body: @escaping (Error) -> Void) {
         self.applyAndRegisterTransformer { promise in
             promise.catch(policy: policy, execute: body)
