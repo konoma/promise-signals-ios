@@ -20,7 +20,7 @@ To run the example project, clone the repo, and run the `Example App` schema.
 To install this library via [Carthage](https://github.com/Carthage/Carthage) add the following to your `Cartfile`:
 
 ```ruby
-github "konoma/promise-signals-ios" ~> 0.2
+github "konoma/promise-signals-ios" ~> 0.3
 ```
 
 Then run the standard `carthage update` process.
@@ -31,7 +31,7 @@ Then run the standard `carthage update` process.
 To install this library via [CocoaPods](https://cocoapods.org) add the following to your `Podfile`:
 
 ```ruby
-pod 'PromiseSignals', '~> 0.2.0'
+pod 'PromiseSignals', '~> 0.3.0'
 ```
 
 Then run the standard `pod update` process.
