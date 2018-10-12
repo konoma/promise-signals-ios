@@ -12,10 +12,12 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/konoma/promise-signals-ios.git', :tag => '0.3.0' }
   s.platform     = :ios, '8.0'
 
+  s.swift_version = '4.2'
   s.requires_arc = true
   s.frameworks   = 'Foundation'
 
   s.source_files = 'PromiseSignals/**/*'
+  s.exclude_files = 'PromiseSignals/Info.plist'
 
-  s.dependency     'PromiseKit/CorePromise'
+  s.dependency     'PromiseKit/CorePromise', '~> 4.0'
 end
