@@ -14,8 +14,8 @@ let backgroundQueue = DispatchQueue(label: "promise-signals-test-background-queu
 
 func doInBackgroundSerial(count: Int, action: @escaping (Int) -> Void) {
     backgroundQueue.sync {
-        for i in 0 ..< count {
-            action(i)
+        for idx in 0 ..< count {
+            action(idx)
         }
     }
 }

@@ -59,14 +59,14 @@ public class SignalHandler<T> {
     @discardableResult
     public func map<U>(on queue: DispatchQueue? = DispatchQueue.main, _ body: @escaping (T) throws -> U) -> SignalHandler<U> {
         let signalHandler = SignalHandler<U>(signalQueue: self.signalQueue, registerOnChain: self.signalChain!)
-        
+
         self.applyAndRegisterTransformer(nextHandler: signalHandler) { promise in
             return promise.map(on: queue, flags: nil, body)
         }
-        
+
         return signalHandler
     }
-    
+
     @discardableResult
     public func thenInBackground<U>(_ body: @escaping (T) throws -> U) -> SignalHandler<U> where U: Thenable {
         return self.map(on: DispatchQueue.global(qos: .background), body)
