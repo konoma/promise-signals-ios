@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.source_files = 'PromiseSignals/**/*'
   s.exclude_files = 'PromiseSignals/Info.plist'
 
-  s.dependency     'PromiseKit/CorePromise', '~> 4.0'
+  s.dependency     'PromiseKit/CorePromise', '~> 6.0'
 end

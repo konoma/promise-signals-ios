@@ -294,7 +294,7 @@
 			};
 			buildConfigurationList = 051E6E811E044A83009B7637 /* Build configuration list for PBXProject "PromiseSignals" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
