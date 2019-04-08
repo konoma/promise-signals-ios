@@ -42,11 +42,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        signalObserver.observe(signal).then { [weak self] value in
+        signalObserver.observe(signal).map { [weak self] value in
             self?.incrementPositiveCounter(change: value)
         }
 
-        signalObserver.observe(signal).then { [weak self] value in
+        signalObserver.observe(signal).map { [weak self] value in
             self?.decrementNegativeCounter(change: value)
         }
 

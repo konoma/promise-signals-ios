@@ -17,7 +17,7 @@ internal enum Result<T> {
 
     internal func promise() -> Promise<T> {
         switch self {
-        case .value(let value): return Promise(value: value)
+        case .value(let value): return Promise.value(value)
         case .error(let error): return Promise(error: error)
         }
     }
