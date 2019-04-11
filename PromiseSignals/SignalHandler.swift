@@ -50,26 +50,26 @@ public class SignalHandler<T> {
         let signalHandler = SignalHandler<U>(signalQueue: self.signalQueue, registerOnChain: self.signalChain!)
 
         self.applyAndRegisterTransformer(nextHandler: signalHandler) { promise in
-            return promise.then(on: queue, execute: body)
+            return promise.then(on: queue, body)
         }
 
         return signalHandler
     }
 
     @discardableResult
-    public func then<U>(on queue: DispatchQueue = DispatchQueue.main, _ body: @escaping (T) throws -> U) -> SignalHandler<U> {
+    public func map<U>(on queue: DispatchQueue? = DispatchQueue.main, _ body: @escaping (T) throws -> U) -> SignalHandler<U> {
         let signalHandler = SignalHandler<U>(signalQueue: self.signalQueue, registerOnChain: self.signalChain!)
 
         self.applyAndRegisterTransformer(nextHandler: signalHandler) { promise in
-            return promise.then(on: queue, execute: body)
+            return promise.map(on: queue, flags: nil, body)
         }
 
         return signalHandler
     }
 
     @discardableResult
-    public func thenInBackground<U>(_ body: @escaping (T) throws -> U) -> SignalHandler<U> {
-        return self.then(on: DispatchQueue.global(qos: .background), body)
+    public func thenInBackground<U>(_ body: @escaping (T) throws -> U) -> SignalHandler<U> where U: Thenable {
+        return self.map(on: DispatchQueue.global(qos: .background), body)
     }
 
     @discardableResult
@@ -79,7 +79,7 @@ public class SignalHandler<T> {
 
     public func `catch`(policy: CatchPolicy = .allErrorsExceptCancellation, _ body: @escaping (Error) -> Void) {
         self.applyAndRegisterTransformer { promise in
-            promise.catch(policy: policy, execute: body)
+            promise.catch(policy: policy, body)
             return
         }
     }
@@ -89,18 +89,7 @@ public class SignalHandler<T> {
         let signalHandler = SignalHandler(signalQueue: self.signalQueue, registerOnChain: self.signalChain!)
 
         self.applyAndRegisterTransformer(nextHandler: signalHandler) { promise in
-            return promise.recover(on: queue, execute: body)
-        }
-
-        return signalHandler
-    }
-
-    @discardableResult
-    public func recover(on queue: DispatchQueue = DispatchQueue.main, _ body: @escaping (Error) throws -> T) -> SignalHandler<T> {
-        let signalHandler = SignalHandler(signalQueue: self.signalQueue, registerOnChain: self.signalChain!)
-
-        applyAndRegisterTransformer(nextHandler: signalHandler) { promise in
-            return promise.recover(on: queue, execute: body)
+            return promise.recover(on: queue, body)
         }
 
         return signalHandler
@@ -111,7 +100,7 @@ public class SignalHandler<T> {
         let signalHandler = SignalHandler(signalQueue: self.signalQueue, registerOnChain: self.signalChain!)
 
         self.applyAndRegisterTransformer(nextHandler: signalHandler) { promise in
-            return promise.always(on: queue, execute: body)
+            return promise.ensure(on: queue, flags: nil, body)
         }
 
         return signalHandler

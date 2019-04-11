@@ -25,7 +25,7 @@ class PromiseSignalsTests: XCTestCase {
         var notifiedValues = [Int]()
         let expectedValues = Array(0 ..< count)
 
-        signalObserver.observe(signal).then { value in
+        signalObserver.observe(signal).map { value in
             notifiedValues.append(value)
         }
 
@@ -44,7 +44,7 @@ class PromiseSignalsTests: XCTestCase {
             self.signalControl.notify(value: value)
         }
 
-        signalObserver.observe(signal).then { value in
+        signalObserver.observe(signal).map { value in
             notifiedValues.append(value)
         }
 
@@ -55,7 +55,7 @@ class PromiseSignalsTests: XCTestCase {
         var notifiedValues = Set<Int>()
         let expectedValues = Set(0 ..< count)
 
-        signalObserver.observe(signal).then { value in
+        signalObserver.observe(signal).map { value in
             notifiedValues.insert(value)
         }
 
@@ -73,7 +73,7 @@ class PromiseSignalsTests: XCTestCase {
             self.signalControl.notify(value: value)
         }
 
-        signalObserver.observe(signal).then { value in
+        signalObserver.observe(signal).map { value in
             notifiedValues.insert(value)
         }
 
@@ -86,7 +86,7 @@ class PromiseSignalsTests: XCTestCase {
         self.signalControl.notify(value: 10)
 
         doInBackgroundParallel(count: count) { _ in
-            self.signalObserver.observe(self.signal).then { value in
+            self.signalObserver.observe(self.signal).map { value in
                 expect(value) == 10
                 reported += 1
             }
