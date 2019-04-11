@@ -56,11 +56,11 @@ public extension NSObject {
         }
     }
 
-    public func observe<T>(_ signal: Signal<T>) -> SignalHandler<T> {
+    func observe<T>(_ signal: Signal<T>) -> SignalHandler<T> {
         return self.defaultObserver.observe(signal)
     }
 
-    public func stopObserving<T>(_ signal: Signal<T>) {
+    func stopObserving<T>(_ signal: Signal<T>) {
         self.defaultObserver.stopObserving(signal)
     }
 }
